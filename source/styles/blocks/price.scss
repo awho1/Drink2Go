@@ -1,0 +1,178 @@
+.price {
+  width: 280px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.price__input-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 34px;
+  }
+}
+
+.price__progress {
+  width: 241px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+  }
+}
+
+.price__input {
+  font-family: $montserrat;
+  width: 118px;
+  padding: 6px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  border-style: solid;
+  border-color: $primary-lighter;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+
+  &:disabled {
+    color: $base-gray;
+    border-color: $light-grey;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $primary-darker;
+  }
+
+  &::placeholder {
+    color: $base-gray;
+  }
+}
+
+.price__input:first-child::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  right: -10px;
+  top: 10px;
+  width: 8px;
+  height: 2px;
+  background-color: $black;
+
+  @media (min-width: $tablet-width) {
+    width: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 114px;
+  }
+}
+
+.price__input::-webkit-inner-spin-button,
+.price__input::-webkit-outerspin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.price__input-separator {
+  position: relative;
+}
+
+.price__input-separator::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: $base-gray;
+  top: 20px;
+  left: -3px;
+}
+
+.price__slider {
+  width: 100%;
+  height: 2px;
+  background-color: $light-grey;
+}
+
+.price__slider .price__progress {
+  position: absolute;
+  right: 25%;
+  left: 0;
+  height: 4px;
+  background-color: $base-primary;
+}
+
+.price__slider,
+.price__slider-input {
+  position: relative;
+}
+
+.price__slider-input input {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: -4px;
+  pointer-events: none;
+  background: 0 0;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  font-family: $montserrat;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  pointer-events: all;
+  -webkit-appearance: none;
+  background-color: $white;
+  border: solid 2px $base-primary;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $base-primary;
+  }
+}
+
+input[type="range"]::-moz-range-thumb {
+  position: relative;
+  font-family: $montserrat;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  pointer-events: all;
+  -moz-appearance: none;
+  background-color: $white;
+  border: solid 2px $base-primary;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+}

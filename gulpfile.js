@@ -114,7 +114,7 @@ export function optimizeVector () {
 
 export function createStack () {
   return src(`${PATH_TO_SOURCE}images/icons/**/*.svg`)
-    .pipe(stacksvg())
+    .pipe(stacksvg({output: 'stack'}))
     .pipe(dest(`${PATH_TO_DIST}images/icons`));
 }
 

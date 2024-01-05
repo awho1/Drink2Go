@@ -1,0 +1,156 @@
+.filter {
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    grid-template-rows: auto 40px;
+    gap: 40px 30px;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 318px;
+    grid-template-rows: repeat(4, auto);
+    gap: 0;
+  }
+}
+
+.filter-form__group {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &--price {
+    margin-bottom: 31px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / 2;
+      margin: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-row: 1 / 2;
+      margin-bottom: 30px;
+    }
+  }
+
+  &--milk {
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 2 / 3;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &--country {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 3 / 4;
+      margin: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.filter-form__title {
+  font-family: $montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  &--price {
+    margin-bottom: 31px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 29px;
+    }
+  }
+
+  &--milk {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 21px;
+    }
+  }
+
+  &--country {
+    margin-bottom: 19px;
+  }
+}
+
+.filter-form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    justify-content: space-between;
+  }
+}
+
+.filter__button {
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}

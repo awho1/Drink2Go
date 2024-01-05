@@ -1,5 +1,43 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px;
+  background-color: $white;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 102px 1fr;
+    grid-template-rows: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 170px 186px 1fr;
+    padding: 0;
+    width: 1360px;
+    margin: 0 auto;
+  }
+}
+
+.header__logo-description {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    font-family: $montserrat;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $black;
+    display: block;
+    grid-column: 2 / 3;
+    margin-left: 20px;
+  }
+}
+
+.header__logo {
+  padding-left: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }

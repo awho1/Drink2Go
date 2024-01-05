@@ -1,0 +1,23 @@
+.logo {
+  width: max-content;
+  height: max-content;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+  }
+
+  .logo__img {
+    width: 32px;
+    height: 36px;
+
+    @media (min-width: $tablet-width) {
+      width: 82px;
+      height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 170px;
+      height: 36px;
+    }
+  }
+}

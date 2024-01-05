@@ -1,0 +1,60 @@
+.swiper {
+  width: 100%;
+  height: 656px;
+  overflow-y: hidden;
+
+  @media (min-width: $tablet-width) {
+    height: 828px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-rtl .swiper-button-next::after,
+.swiper-button-next::after,
+.swiper-rtl .swiper-button-prev::after {
+  color: transparent;
+}
+
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.swiper-pagination-horizontal .swiper-pagination-bullet {
+  @media (min-width: $desktop-width) {
+    width: 62px;
+    height: 4px;
+    border-radius: 0;
+    background-color: $white;
+    opacity: 1;
+
+    &-active {
+      background-color: $base-primary;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $opacity-primary;
+    }
+
+    &:active {
+      background-color: $base-primary;
+    }
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets .swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 64px;
+  left: 0;
+  width: 100%;
+}

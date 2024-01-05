@@ -1,0 +1,163 @@
+.control {
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+
+  &--radio {
+    padding-left: 37px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 34px;
+    }
+  }
+
+  &--checkbox {
+    padding-left: 55px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 51px;
+    }
+  }
+}
+
+.control__mark--radio {
+  box-sizing: border-box;
+  position: absolute;
+  top: 42%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-gray;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    left: 0;
+    top: 50%;
+  }
+}
+
+.control__text {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.control__mark--checkbox {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 24px;
+  background-color: $base-gray;
+  border: 2px solid $base-gray;
+  border-radius: 12px;
+
+  @media (min-width: $tablet-width) {
+    top: 48%;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border-radius: 50%;
+  }
+}
+
+.control__input {
+  &:hover + .control__mark--checkbox {
+    border-color: $primary-lighter;
+    background-color: $opacity-primary;
+  }
+
+  &:checked + .control__mark--checkbox {
+    border-color: $base-primary;
+    background-color: $base-primary;
+  }
+
+  &:checked + .control__mark--checkbox::after {
+    right: 0;
+    left: unset;
+  }
+
+  &:checked:disabled + .control__mark--checkbox::after {
+    background-color: $base-gray;
+  }
+
+  &:disabled + .control__mark--checkbox {
+    border-color: $light-grey;
+    background-color: $light-grey;
+  }
+
+  &:hover + .control__mark--radio,
+  &:focus + .control__mark--radio {
+    border-color: $primary-lighter;
+  }
+
+  &:hover + .control__mark--radio::after,
+  &:focus + .control__mark--radio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background-color: $opacity-primary;
+    border-radius: 50%;
+  }
+
+  &:active + .control__mark--radio {
+    border-color: $base-gray;
+  }
+
+  &:checked + .control__mark--radio {
+    border-color: $base-primary;
+  }
+
+  &:checked + .control__mark--radio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background-color: $base-primary;
+    border-radius: 50%;
+  }
+
+  &:disabled + .control__mark--radio {
+    border-color: $light-grey;
+  }
+
+  &:disabled ~ .control__text {
+    color: $light-grey;
+  }
+
+  &:checked:disabled + .control__mark--radio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background-color: $light-grey;
+    border-radius: 50%;
+  }
+}

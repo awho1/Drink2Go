@@ -1,0 +1,135 @@
+.main-menu {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+
+  &--opened {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $white;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &--closed {
+    display: none;
+  }
+}
+
+.main-menu--no-js {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $white;
+  width: 100%;
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: row;
+    width: max-content;
+    z-index: 3;
+  }
+}
+
+.main-menu__item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $base-secondary;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+
+  &:first-child {
+    border-top: 1px solid $base-secondary;
+  }
+}
+
+.main-menu__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: $black;
+  padding: 20px 0;
+  text-decoration: none;
+  width: 100%;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin: 0;
+    padding: 32px 20px;
+    height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-decoration: none;
+
+    &:hover {
+      color: $base-primary;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+      color: $base-primary;
+    }
+
+    &:focus {
+      outline: none;
+      color: $base-primary;
+    }
+  }
+}
+
+.main-menu__link--current {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    color: $base-primary;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $base-primary;
+    }
+  }
+}

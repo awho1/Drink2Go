@@ -1,0 +1,71 @@
+.button {
+  font-family: $montserrat;
+  border: none;
+  background-color: transparent;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.button__text {
+  font-family: $montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.button--primary {
+  background-color: $base-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $white;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-gray;
+  }
+}
+
+.button--secondary {
+  background-color: $white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: $base-primary;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $white;
+  }
+}
+
+.button--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}

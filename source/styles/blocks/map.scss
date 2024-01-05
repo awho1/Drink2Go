@@ -1,0 +1,13 @@
+.map {
+  width: 100vw;
+  height: 416px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    height: 475px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 540px;
+  }
+}
